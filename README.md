@@ -1,2 +1,1 @@
-# blog
-Nefertechie Blog
+# hugo-blog

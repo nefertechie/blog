@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nefertechie Blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Nefertechie Blog</description>
+    <generator>Hugo -- 0.138.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Nov 2024 01:01:49 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Root of Un-Trust</title>
+      <link>http://localhost:1313/posts/root-of-untrust/</link>
+      <pubDate>Wed, 13 Nov 2024 01:01:49 -0500</pubDate>
+      <guid>http://localhost:1313/posts/root-of-untrust/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Recently, I received a couple of Kingdel branded mini PCs from a system integrator friend of mine as a favor for some pro bono work I did. The machines all came with an Intel quad core processor, 16GB of DDR3 RAM, dual Realtek NICS and were all silent. I thought they&amp;rsquo;d be perfect for a small Proxmox virtualization environment, especially since they all supported dual MSATA flash disks. This blog post will document my experience analyzing these devices to determine whether they are fit for production use in my lab.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
