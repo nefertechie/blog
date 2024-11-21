@@ -6,7 +6,7 @@ author = 'David Hillman'
 +++
 ## Introduction
 
-Recently, I received a couple of Kingdel branded mini PCs from a system integrator friend of mine as a favor for some pro bono work I did. The machines all came with an Intel quad core processor, 16GB of DDR3 RAM, dual Realtek NICS and were all silent. I thought they'd be perfect for a small Proxmox virtualization environment, especially since they all supported dual MSATA flash disks. This blog post will document my experience analyzing these devices to determine whether they are fit for production use in my lab.
+Recently, I received a couple of Kingdel branded mini PCs as a favor for some work I did. The machines all came with an Intel quad core processor, 16GB of DDR3 RAM, dual Realtek NICS and were all silent. I thought they'd be perfect for a small Proxmox virtualization environment, especially since they all supported dual MSATA flash disks. This blog post will document my experience analyzing these devices to determine whether they are fit for use in my lab.
 
 ## Teardown
 
