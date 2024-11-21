@@ -12,7 +12,7 @@ Recently, I received a couple of Kingdel branded mini PCs as a favor for some wo
 
 I started my assessment of these tiny devices by booting up each one to see whether they worked. All devices booted up perfectly to Windows. Next, I opened up the back panel to check out the hardware. All of the devices came with a single Samsung 240GB MSATA disk and Intel wireless card. Next, I looked for any BIOS upgrades that might be available, and that's where the problems started. The manufacturer website (https://kingdel.com/cn) showed no BIOS images available. I then searched the BIOS maker website--American Megatrends--but came up empty handed. According to the website, Kingdel is based out of Shenzhen, China.
 
-![Kingdel PC](/05_kingdel_pc.jpg 'Kingdel PC')
+![Kingdel PC](/blog/05_kingdel_pc.jpg 'Kingdel PC')
 
 ## Linux OS Installation
 
@@ -22,7 +22,7 @@ Next steps were to install the OS I had been running for a year on various deskt
 
 Using the Privacy & Security tools, I was able to determine the device didn't have SecureBoot enabled. This is important to device and data security because Secure Boot uses cryptographic signatures to verify code integrity as the device boots. Two critical databases are involved in this process: an Allow DB (db) of approved components and a Disallow DB (dbx) of vulnerable or malicious components--firmware code, drivers, bootloaders, shims etc. A Key Exchange Key (KEK) protects these databases from being modified inappropriately. All of this is then verified by a Platform Key (PK), which serves as the root of trust for firmware updates. PK is not used as part of the boot process, but it is still pretty important. The dbx, db, and KEK are what's used to verify signatures for any objects loaded at boot time, including the operating system images. I was not surprised when the firmware tools revealed some outdated objects present on these systems. Even worse, the firmware was signed by a PK that was invalidated. 
 
-![Device Checks](/00_device_checks_result.jpg 'Device Checks')
+![Device Checks](/blog/00_device_checks_result.jpg 'Device Checks')
 
 ## Vulnerability Note VU#455367 - Insecure Platform Key (PK) used in UEFI System
 
@@ -32,7 +32,7 @@ According to the description for this vulnerability and the UEFI standard, there
 
 The fwupd project (https://github.com/fwupd/fwupd) aims to make firmware updates on Linux automatic, safe, and reliable. The tools can be installed using Snap or Flatpak if they are not already installed. Bleeding edge versions can be compiled, but should not be considered a replacement for the distro-provided version installed on the system. The tools are configured by default to download firmware from Linux Vendor Firmware Service (LVFS). The service is available to all OEMs and firmware authors who would like to make firmware available through Linux.
 
-![AMI BIOS Do Not Use](/03_ami_bios_do_not_use.jpg 'AMI BIOS Do Not Use')
+![AMI BIOS Do Not Use](/blog/03_ami_bios_do_not_use.jpg 'AMI BIOS Do Not Use')
 
 ###Check Device Supported by fwupd
 
